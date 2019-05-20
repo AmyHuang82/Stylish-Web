@@ -1,0 +1,102 @@
+.square {
+    border: 1px solid gray;
+    margin: 50px auto 40vh auto;
+    height: 450px;
+    width: 70%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+#profile {
+    display: none;
+}
+
+#login {
+    display: flex;
+    height: 300px;
+    margin-bottom: 50vh;
+}
+
+.left {
+    color: white;
+    font-size: 60px;
+    margin-bottom: 10px;
+    height: 100%;
+    width: 40%;
+    text-align: left;
+    background-color: #313538;
+    margin-right: auto;
+    font-weight: 800;
+    padding-left: 10px;
+}
+
+.FB-picture {
+    width: 180px;
+    height: 180px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    background-size: cover;
+}
+
+.FB-info {
+    text-align: left;
+    width: 70%;
+    margin: 0 auto 0 auto;
+}
+
+.right {
+    width: 60%;
+    align-self: center;
+    text-align: center;
+}
+
+.square p {
+    font-family: PingFangTC-Thin, sans-serif;
+    font-size: 18px;
+    color: #313538;
+}
+
+.orderNumber {
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 990px) {
+    .left {
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .square {
+        width: 90%;
+        flex-flow: column;
+    }
+
+    .left {
+        width: 100%;
+        height: 30%;
+    }
+
+    .right {
+        padding-top: 10px;
+        height: 100%;
+        width: 100%;
+    }
+
+    #login .right {
+        padding-top: 50px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .FB-info {
+        width: 85%;
+    }
+
+    .container {
+        width: 95%;
+    }
+}

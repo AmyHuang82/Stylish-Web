@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="你的時尚Stylish幫你完成，最新簡約時尚衣物飾品盡在Stylish">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135639738-1"></script>
+    <script src="./javascript/googleanalytic.js"></script>
+    <script async defer src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.2&appId=382270332603829&autoLogAppEvents=1"></script>
+    <link rel="stylesheet" href="./stylesheet/style.css">
+    <title>Stylish｜時尚從Stylish開始</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./images/logo.png" alt="logo">
+            </a>
+        </div>
+
+        <div class="mobile-search">
+            <form action="" class="searchBar" id="mobile-search-form" style="display:none">
+                <input type="text" name="tag">
+            </form>
+
+            <img src="./images/search.png" alt="search" id="mobile-search-icon">
+        </div>
+
+        <nav id="category-nav">
+            <div class="item menu-list" id="women"><a href="./index.html?category=women">女裝</a></div>
+            <div class="item menu-list" id="men"><a href="./index.html?category=men">男裝</a></div>
+            <div class="item menu-list" id="accessories"><a href="./index.html?category=accessories">配件</a></div>
+        </nav>
+
+        <div class="feature">
+            <div class="item searchBar">
+                <form action="" id="desktop-search-form">
+                    <input type="text" name="tag">
+                    <button class="search" id="desktop-search-icon" type="submit"></button>
+                </form>
+            </div>
+
+            <div class="item cart">
+                <a href="./pages/cart.html" id="cart-href"></a>
+                <a href="./pages/cart.html" class="cart-count">0</a>
+            </div>
+
+            <div class="item member login-member">
+                <a href="./pages/profile.html"></a>
+            </div>
+        </div>
+
+        <div class="mobile-feature">
+            <a class="item" href="./pages/cart.html">
+                <div class="item" id="cart-div">
+                    <div class="cart-img">
+
+                        <img src="./images/cart-mobile.png" alt="cart">
+
+                        <span class="cart-count">0</span>
+                    </div>
+                    購物車
+                </div>
+            </a>
+            <a class="item with-border" href="./pages/profile.html">
+                <img src="./images/member-mobile.png" alt="member" class="mobile-login-member">會員
+            </a>
+        </div>
+    </header>
+
+    <div class="bottomLine"></div>
+
+    <!-- campaign -->
+    <div class="campaign" id="campaign">
+        <div id="story"></div>
+
+        <div class="circles"></div>
+    </div>
+
+    <!-- Product -->
+    <div class="container last-section">
+        <div class="products" id="product-list">
+
+            <div class="load">
+                <img src="./images/loading.gif" alt="Loading...">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <nav>
+                <div class="item"><a href="">關於 Stylish</a></div>
+                <div class="item"><a href="">服務條款</a></div>
+                <div class="item"><a href="">隱私政策</a></div>
+                <div class="item"><a href="">聯絡我們</a></div>
+                <div class="item"><a href="">FAQ</a></div>
+            </nav>
+
+            <div class="social-icons">
+                <div class="social-icon"><a href=""><img src="./images/line.png" alt="line"></a></div>
+                <div class="social-icon"><a href=""><img src="./images/twitter.png" alt="twitter"></a></div>
+                <div class="social-icon"><a href=""><img src="./images/facebook.png" alt="facebook"></a></div>
+            </div>
+
+            <div class="copy-right">
+                &copy; 2018. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- product list javascript (search & scroll) -->
+    <script src="./javascript/stylish.js"></script>
+
+    <!-- campaign javascript -->
+    <script src="./javascript/campaign.js"></script>
+
+    <!-- cart count javascript -->
+    <script src="./javascript/localstorage.js"></script>
+
+    <!-- login check -->
+    <script src="./javascript/login.js"></script>
+
+</body>
+
+</html>

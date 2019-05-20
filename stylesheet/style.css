@@ -1,0 +1,903 @@
+/* ---------- Basic Setting ------------ */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+header,
+footer,
+section,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+ul,
+li,
+aside,
+nav,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-family: PingFangTC-Regular, sans-serif;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+}
+
+/* ---------- Header ----------- */
+header,
+nav,
+.feature,
+.item {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-feature {
+    display: none;
+}
+
+header {
+    height: 100px;
+}
+
+header a {
+    color: #3f3a3a;
+    font-size: 20px;
+    font-family: PingFangTC-Regular, sans-serif;
+}
+
+header nav {
+    padding-top: 12px;
+    margin-left: 66px;
+    margin-right: auto;
+    letter-spacing: 30px;
+}
+
+header nav a {
+    width: 130px;
+    height: 28px;
+    padding-left: 30px;
+    color: #3f3a3a;
+}
+
+header .current a {
+    color: #8b572a;
+}
+
+header nav a:hover {
+    color: #8b572a;
+}
+
+.logo {
+    max-width: 258px;
+    width: 33.33333%;
+}
+
+.logo img {
+    margin-left: 60px;
+    width: 100%;
+    height: auto;
+}
+
+header nav .item {
+    border-right: 1px solid #3f3a3a;
+}
+
+.mobile-search {
+    display: none;
+}
+
+.searchBar {
+    width: 214px;
+    height: 40px;
+    border: solid 1px #979797;
+    border-radius: 40px;
+    background-color: white;
+}
+
+.searchBar input {
+    margin-left: 20px;
+    width: 145px;
+    height: 38px;
+    border: none;
+    font-size: 20px;
+    outline: 0;
+}
+
+.searchBar form {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+
+.feature {
+    margin-right: 54px;
+    width: 33.33333%;
+    max-width: 400px;
+}
+
+.feature .item {
+    margin-left: auto;
+}
+
+.search,
+.cart,
+.member,
+.member a {
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+}
+
+.search {
+    background-image: url("../images/search.png");
+    background-position: center;
+    background-size: 44px;
+    background-repeat: no-repeat;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.search:hover {
+    background-image: url("../images/search-hover.png");
+}
+
+.cart a {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(248, 51, 51);
+    color: white;
+    text-align: center;
+    margin: auto;
+    line-height: 20px;
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+}
+
+#cart-href {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.cart {
+    position: relative;
+    background-image: url("../images/cart.png");
+    background-position: center;
+    background-size: 44px;
+    background-repeat: no-repeat;
+}
+
+.cart:hover {
+    background-image: url("../images/cart-hover.png");
+}
+
+
+.member {
+    background-image: url("../images/member.png");
+    background-position: center;
+    background-size: 44px;
+    background-repeat: no-repeat;
+}
+
+.member:hover {
+    background-image: url("../images/member-hover.png");
+}
+
+.bottomLine {
+    width: 100%;
+    height: 40px;
+    background-color: #313538;
+}
+
+#cart-div {
+    width: 100%;
+}
+
+/* ---------- Campaign ----------- */
+
+/* ----------自訂左右滑效果---------- */
+@keyframes animateright {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes animateleft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+@-moz-keyframes animateright {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes animateleft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+
+@-webkit-keyframes animateright {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes animateleft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+@-o-keyframes animateright {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-o-keyframes animateright {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes animateout-right {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes animateout-left {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes animateout-right {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+@-moz-keyframes animateout-left {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes animateout-right {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+@-webkit-keyframes animateout-left {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-o-keyframes animateout-right {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+@-o-keyframes animateout-left {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.campaign {
+    position: relative;
+    height: 500px;
+
+    /* 因為做左右滑動會超過x軸所以要hidden起來 */
+    overflow: hidden;
+}
+
+.story {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    padding: 166px 0 106px 50px;
+    font-size: 30px;
+    line-height: 57px;
+    color: #070707;
+    font-family: PingFangTC-Thin, sans-serif;
+    text-shadow: 2px 2px 5px white;
+
+    /* 這樣可以讓一剛開始圖片還沒load出來的時候，字看起來不會疊在一起 */
+    background-color: white;
+
+    /* 淡入淡出變化 */
+    /* opacity: 0;
+    z-index: 1;
+    -webkit-transition: opacity 5s;
+    -moz-transition: opacity 5s;
+    -o-transition: opacity 5s;
+    transition: opacity 5s; */
+}
+
+.showing-right-out {
+    animation: animateout-right .7s linear forwards;
+}
+
+.showing-right {
+    /* opacity: 1;
+    z-index: 2; */
+
+    animation: animateright .7s linear forwards;
+}
+
+.showing-left {
+    animation: animateleft .7s linear forwards;
+}
+
+.showing-left-out {
+    animation: animateout-left .7s linear forwards;
+}
+
+.last-line {
+    font-size: 20px;
+}
+
+.circles {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    z-index: 100;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    margin-left: 30px;
+    background-color: #ffffff;
+    opacity: 0.4;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active {
+    width: 15px;
+    height: 15px;
+    margin-left: 30px;
+    background-color: #ffffff;
+    opacity: 0.4;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #8b572a;
+    opacity: 1;
+}
+
+/* ---------- Product ----------- */
+.container {
+    width: 80%;
+    margin: auto;
+    max-width: 1240px;
+}
+
+.products {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 70px 0 96px 0;
+}
+
+.product {
+    width: 33.33333%;
+    padding: 0 20px 50px 20px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product-colors {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.product-color {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.products p {
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #3f3a3a;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+.description {
+    padding: 20px 0 10px 0;
+}
+
+.load {
+    font-family: PingFangTC-Thin, sans-serif;
+    margin: auto;
+    font-size: 20px;
+    height: 20vh;
+}
+
+.load img {
+    width: 45px;
+}
+
+/* ---------- Footer ----------- */
+footer {
+    background-color: #313538;
+    height: 115px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+footer .container,
+.social-icons,
+footer nav {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.social-icons {
+    margin-left: auto;
+}
+
+.social-icon,
+.copy-right {
+    padding-left: 30px;
+}
+
+.copy-right {
+    padding-right: 20px;
+}
+
+footer nav .item {
+    width: 130px;
+    border-right: 1px solid #828282;
+}
+
+.item:last-child {
+    border-right: 0;
+}
+
+footer nav a {
+    color: #f5f5f5;
+    font-size: 16px;
+    margin: auto;
+}
+
+footer nav a:hover {
+    color: #c49871;
+    font-weight: 600;
+}
+
+.copy-right {
+    font-size: 12px;
+    color: #828282;
+}
+
+/* ---------- Mobile ----------- */
+@media screen and (max-width: 1650px) {
+    .social-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    footer nav a {
+        font-size: 14px;
+    }
+
+    footer .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .social-icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    header nav a:hover {
+        color: white;
+    }
+
+    footer nav a:hover {
+        color: white;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+        display: flex;
+        flex-flow: column;
+        height: 100px;
+    }
+
+    .logo,
+    .mobile-search {
+        display: inline-block;
+    }
+
+    .mobile-search img {
+        width: 30px;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+
+    .searchBar {
+        width: 30%;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+
+    .searchBar input {
+        width: 80%;
+    }
+
+    .logo {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 25px;
+        width: auto;
+        margin: 0;
+    }
+
+    .bottomLine {
+        display: none;
+    }
+
+    .feature {
+        display: none;
+    }
+
+    header nav {
+        background-color: #313538;
+        width: 100%;
+        height: 50px;
+        padding: 0;
+        margin: 0;
+        justify-content: space-around;
+    }
+
+    header nav a {
+        font-size: 16px;
+        color: #828282;
+        letter-spacing: normal;
+        padding-left: 0;
+        width: auto;
+    }
+
+    header .current a {
+        color: #ffffff;
+    }
+
+    header nav .item {
+        border-right: 1px solid #828282;
+        width: 33.33333%;
+    }
+
+    .mobile-feature {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        background-color: #313538;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+    }
+
+    .mobile-feature .item {
+        color: #ffffff;
+        font-size: 16px;
+        width: 50%;
+        height: 24px;
+    }
+
+    .with-border {
+        border-left: 1px solid #828282;
+    }
+
+    .cart-img {
+        position: relative;
+        height: 44px;
+        width: 44px;
+    }
+
+    .mobile-feature span {
+        width: 20px;
+        height: 20px;
+        background-color: rgb(248, 51, 51);
+        color: white;
+        text-align: center;
+        margin: auto;
+        line-height: 20px;
+        font-size: 15px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-radius: 50%;
+    }
+
+
+    /* ---------- footer ---------- */
+    footer {
+        margin-bottom: 60px;
+    }
+
+    .copy-right {
+        width: 100%;
+        text-align: center;
+        padding-top: 15px;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    /* ---------- Campaign ---------- */
+    .campaign {
+        height: 390px;
+    }
+
+    .story {
+        height: 390px;
+        padding: 100px 0 50px 50px;
+    }
+
+    /* ---------- Products --------- */
+
+    .products p {
+        font-size: 16px;
+    }
+
+    .load {
+        font-size: 16px;
+        height: 55vh;
+    }
+
+    /* --------- Ftooer ----------- */
+    footer {
+        height: 148px;
+    }
+
+    footer nav {
+        width: 68%;
+        justify-content: flex-start;
+    }
+
+    footer nav .item {
+        border: 0;
+        width: 50%;
+    }
+
+    footer nav a {
+        font-size: 14px;
+        padding-bottom: 8px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .social-icon {
+        padding-left: 14px;
+    }
+
+    .social-icon:first-child {
+        padding-left: 0;
+    }
+
+    footer nav .item:nth-child(1) {
+        order: 1;
+    }
+
+    footer nav .item:nth-child(2) {
+        order: 3;
+    }
+
+    footer nav .item:nth-child(3) {
+        order: 5;
+    }
+
+    footer nav .item:nth-child(4) {
+        order: 2;
+    }
+
+    footer nav .item:nth-child(5) {
+        order: 4;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    /* ---------- Header ----------- */
+    .searchBar {
+        width: 95%;
+    }
+
+    .searchBar input {
+        width: 88%;
+    }
+
+    /* ---------- Campaign --------- */
+    .campaign {
+        height: 220px;
+    }
+
+    .story {
+        height: 220px;
+        padding: 45px 0 50px 15px;
+        font-size: 16px;
+        line-height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .last-line {
+        font-size: 12px;
+    }
+
+    .circles {
+        bottom: 15px;
+    }
+
+    .circle {
+        width: 10px;
+        height: 10px;
+        margin-left: 22px;
+    }
+
+    .active {
+        width: 10px;
+        height: 10px;
+        margin-left: 22px;
+    }
+
+    /* --------- Products --------- */
+    .container {
+        width: 95%;
+    }
+
+    .products {
+        padding: 20px 0 30px 0;
+    }
+
+    .product {
+        width: 50%;
+        padding: 0 10px 24px 10px;
+    }
+
+    .product-color {
+        width: 12px;
+        height: 12px;
+        margin-right: 6px;
+        margin-top: 8px;
+    }
+
+    .products p {
+        font-size: 15px;
+        letter-spacing: 2.4px;
+    }
+
+    .description {
+        padding: 10px 0 8px 0;
+    }
+}
+
+/* 取消手機點擊hilight效果 */
+div {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

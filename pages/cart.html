@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135639738-1"></script>
+    <script src="../javascript/googleanalytic.js"></script>
+    <script src="https://js.tappaysdk.com/tpdirect/v4"></script>
+    <script async defer src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.2&appId=382270332603829&autoLogAppEvents=1"></script>
+    <link rel="stylesheet" href="../stylesheet/style.css">
+    <link rel="stylesheet" href="../stylesheet/cart.css">
+    <title>Stylish｜時尚從Stylish開始</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../images/logo.png" alt="logo">
+            </a>
+        </div>
+
+        <div class="mobile-search">
+            <form action="" class="searchBar" id="mobile-search-form" style="display:none">
+                <input type="text" name="tag">
+            </form>
+
+            <img src="../images/search.png" alt="search" id="mobile-search-icon">
+        </div>
+
+        <nav id="category-nav">
+            <div class="item menu-list"><a href="../index.html?category=women">女裝</a></div>
+            <div class="item menu-list"><a href="../index.html?category=men">男裝</a></div>
+            <div class="item menu-list"><a href="../index.html?category=accessories">配件</a></div>
+        </nav>
+
+        <div class="feature">
+            <div class="item searchBar">
+                <form action="" id="desktop-search-form">
+                    <input type="text" name="tag">
+                    <button class="search" id="desktop-search-icon" type="submit"></button>
+                </form>
+            </div>
+
+            <div class="item cart">
+                <a href="../pages/cart.html" id="cart-href"></a>
+                <a href="../pages/cart.html" class="cart-count">0</a>
+            </div>
+
+            <div class="item member login-member">
+                <a href="../pages/profile.html"></a>
+            </div>
+        </div>
+
+        <div class="mobile-feature">
+            <a class="item" href="../pages/cart.html">
+                <div class="item" id="cart-div">
+                    <div class="cart-img">
+
+                        <img src="../images/cart-mobile.png" alt="cart">
+
+                        <span class="cart-count">0</span>
+                    </div>
+                    購物車
+                </div>
+            </a>
+            <a class="item with-border" href="../pages/profile.html">
+                <img src="../images/member-mobile.png" alt="member" class="mobile-login-member">會員
+            </a>
+        </div>
+    </header>
+
+    <div class="bottomLine"></div>
+
+    <!-- Cart  -->
+    <div class="container" id="cart">
+        <div class="home-bag">HOME > BAG</div>
+
+        <div class="title-line">
+            <div class="left">購物車(<span id="product-number">0</span>)</div>
+            <div class="right">
+                <p>數量</p>
+                <p>單價</p>
+                <p>小計</p>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="cart-content">
+            <!-- <div class="cart-product">
+                <div class="left">
+                    <div class="cart-product-img">
+                        <img src="http://18.214.165.31/assets/201807201824/main.jpg" alt="">
+                    </div>
+                    <div class="cart-detail">
+                        前開衩扭結洋裝<br>
+                        <br>
+                        03040047<br>
+                        <br>
+                        顏色｜白<br>
+                        尺寸｜M<br>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="cart-count">
+                        <div class="word">數量</div>
+                        <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="cart-price">
+                        <div class="word">單價</div>
+                        <p>NT.590</p>
+                    </div>
+                    <div class="cart-subtotal">
+                        <div class="word">小計</div>
+                        <p>NT.590</p>
+                    </div>
+                </div>
+                <div class="cart-delete"></div>
+            </div> -->
+        </div>
+
+        <div class="cart-deliver">
+            <div class="countries">
+                <p>配送國家</p>
+                <select>
+                    <option value="臺灣及離島">臺灣及離島</option>
+                </select>
+            </div>
+
+            <div class="pay-way">
+                <p>付款方式</p>
+                <select>
+                    <option value="信用卡">信用卡</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="remind">
+            ※ 提醒您：<br>
+            ● 選擇宅配-請填寫正確收件人資訊，避免包裹配送不達<br>
+            ● 選擇超商-請填寫正確收件人姓名(與證件相符)，避免無法領取<br>
+        </div>
+
+        <p class="order-title">訂購資料</p>
+        <div class="order-info">
+            <form action="" id="order-information">
+                <p>收件人姓名</p><input type="text" name="name">
+                <p class="reminder">務必填寫完整收件人姓名，避免包裹無法順利簽收</p>
+                <p>聯絡電話</p><input type="text" name="phone" placeholder="09********">
+                <p>E-mail</p><input type="text" name="email">
+                <p>收件地址</p><input type="text" name="address">
+
+                <div class="deliver-time">
+                    <p>配送時間</p>
+                    <div>
+                        <input type="radio" name="time" value="morning">
+                        <label for="08:00-12:00">08:00-12:00</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="time" value="afternoon">
+                        <label for="14:00-18:00">14:00-18:00</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="time" value="anytime">
+                        <label for="不指定">不指定</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <p class="order-title">信用卡資訊</p>
+        <div class="order-info">
+            <form action="">
+                <p>信用卡卡號</p>
+                <div class="tpfield" id="card-number"></div>
+                <p>卡片到期日</p>
+                <div class="tpfield" id="card-expiration-date"></div>
+                <p>卡片安全碼</p>
+                <div class="tpfield" id="card-ccv"></div>
+            </form>
+        </div>
+
+        <div class="checkout">
+            <div class="left">總金額</div>
+            <div class="right">NT. <span id="total">0</span></div>
+            <div class="left">運費</div>
+            <div class="right">NT. <span id="shipping-fee">0</span></div>
+            <div class="line"></div>
+            <div class="left">應付金額</div>
+            <div class="right">NT. <span id="total-fee">0</span></div>
+        </div>
+
+        <button class="checkout-btn">確認付款</button>
+
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <nav>
+                <div class="item"><a href="">關於 Stylish</a></div>
+                <div class="item"><a href="">服務條款</a></div>
+                <div class="item"><a href="">隱私政策</a></div>
+                <div class="item"><a href="">聯絡我們</a></div>
+                <div class="item"><a href="">FAQ</a></div>
+            </nav>
+
+            <div class="social-icons">
+                <div class="social-icon"><a href=""><img src="../images/line.png" alt="line"></a></div>
+                <div class="social-icon"><a href=""><img src="../images/twitter.png" alt="twitter"></a></div>
+                <div class="social-icon"><a href=""><img src="../images/facebook.png" alt="facebook"></a></div>
+            </div>
+
+            <div class="copy-right">
+                &copy; 2018. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../javascript/pagesearch.js"></script>
+    <script src="../javascript/localstorage.js"></script>
+    <script src="../javascript/cart.js"></script>
+    <script src="../javascript/login.js"></script>
+
+</body>
+
+</html>
